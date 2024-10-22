@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">MTEC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+</head>
+<body>
+
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <canvas id="chart"></canvas>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vegetação do Cerrado</font></font></h1>
+            <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><p>A vegetação do Cerrado é bastante variada, composta por formações que vão desde campos abertos<br> até áreas com árvores mais densas, mostrando uma notável adaptação às condições<br> de seca e fogo. As principais formações vegetais incluem:
+            </p>
+            <p><b>Campo limpo</b>:<br> Área aberta com predominância de gramíneas.
+            </p>
+            <br>
+            <br>
+            <p><b>Campo sujo:</b><br> Gramíneas e arbustos esparsos.
+            </p>
+            <br>
+            <br>
+            <p><b>Cerrado stricto sensu:</b><br> Savana típica com árvores baixas, retorcidas e espaçadas, além de um sub-bosque de arbustos.
+            </p>
+            <br>
+            <br>
+            <p><b>Cerradão:</b><br> Floresta mais densa, com árvores mais altas e menos espaçadas.
+            </p>
+            <br>
+            <br>
+            <br>
+            <p>As espécies de plantas do Cerrado são altamente adaptadas ao fogo e ao solo pobre em nutrientes.<br> Árvores possuem cascas grossas, folhas cobertas de pelos e raízes profundas, permitindo a busca por<br> água em camadas mais profundas do solo. Exemplos incluem:
+            </p>
+            <p><b>Ipê-amarelo:</b><br> Árvore com floração amarela vibrante, comum durante a estação seca.</p>
+            <br>
+            <br>
+            <p><B>Pequi :</B><br> Árvore frutífera característica, cujos frutos são muito usados na culinária regional.
+            </p>
+            <br>
+            <br>
+            <p><b>Barbatimão :</b><br> Árvore conhecida por suas propriedades medicinais</p></b>.</font></font></p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <style>
+          #chart {
+              width: 100%;
+              height: 400px;
+              margin-top: 20px;
+          }
+      </style>
+  </head>
+  <body>
+      <div class="container mt-5">
+          
+          
+      </div>
+  
+      <script>
+          var ctx = document.getElementById('chart').getContext('2d');
+          var chart = new Chart(ctx, {
+              type: 'doughnut',
+              data: {
+                  labels: ['Gramíneas', 'Arbustos', 'Árvores', 'Plantas Aquáticas'],
+                  datasets: [{
+                      label: 'Percentual de Cobertura',
+                      data: [70, 15, 10, 5],
+                      backgroundColor: [
+                          'rgba(75, 192, 192, 0.2)',
+                          'rgba(255, 99, 132, 0.2)',
+                          'rgba(54, 162, 235, 0.2)',
+                          'rgba(255, 206, 86, 0.2)'
+                      ],
+                      borderColor: [
+                          'rgba(75, 192, 192, 1)',
+                          'rgba(255, 99, 132, 1)',
+                          'rgba(54, 162, 235, 1)',
+                          'rgba(255, 206, 86, 1)'
+                      ],
+                      borderWidth: 1
+                  }]
+              },
+              options: {
+                  responsive: true
+              }
+          });
+      </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
