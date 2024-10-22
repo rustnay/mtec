@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #chart {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+    </style>
+
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <canvas id="chart"></canvas>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Téecnologias Sociais</font></font></h1>
+            <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">As tecnologias sociais na Caatinga são focadas em promover a sustentabilidade e melhorar a qualidade de vida das comunidades rurais. Aqui estão alguns exemplos:
+                <br>
+                <b>Cisternas de Placas:</b> Soluções para coleta e armazenamento de água de chuva, essenciais para a sobrevivência em regiões áridas.
+                <br>
+                <b>Meliponicultura:</b> Criação de abelhas sem ferrão, que proporciona mel e favorece a polinização.
+                <br>
+                <b>Sistemas Agroecológicos:</b> Práticas agrícolas que utilizam recursos locais e promovem a biodiversidade.
+                <br>
+                <b>Arranjos Produtivos Locais (APLs):</b> Iniciativas que fortalecem a economia local, garantindo segurança alimentar e preservação ambiental.
+                <br>
+                <b>Educação Ambiental:</b> Programas que conscientizam e capacitam as comunidades sobre práticas sustentáveis.
+                <br>
+                Essas tecnologias são desenvolvidas a partir do conhecimento local e práticas coletivas, visando a inclusão social e o desenvolvimento sustentável
+            </p></b>.</font></font></p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
+    <div class="container mt-5">
+
+        
+        
+    </div>
+
+    <script>
+        var ctx = document.getElementById('chart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Cisternas de Placas', 'Meliponicultura', 'Sistemas Agroecológicos', 'Arranjos Produtivos Locais', 'Educação Ambiental'],
+                datasets: [{
+                    label: 'Tecnologias Sociais (%)',
+                    data: [25, 20, 20, 20, 15],
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(153, 102, 255, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(153, 102, 255, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+
+</body>
+</html>

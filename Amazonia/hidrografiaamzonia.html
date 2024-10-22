@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">MTEC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../Inicio/index.html">Home</a>
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+</header>
+</head>
+<body>
+
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <div class="container">
+                <div id="map"></div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hidrografia da Amazônia</font></font></h1>
+            <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A Bacia Amazônica é a maior bacia hidrográfica do mundo,<br> alimentada pelo Rio Amazonas, que é o maior rio em volume de água e o segundo mais longo do planeta. </p>
+                <p>O sistema fluvial da Amazônia inclui inúmeros rios, igarapés, lagos e pântanos.</p>
+                <p>Esses corpos d'água desempenham um papel crucial no transporte, no fornecimento de alimentos e na biodiversidade.
+                </p>
+                <p>O ciclo das águas na Amazônia é fundamental para manter o equilíbrio climático da região. O fenômeno da "evapotranspiração",<br> em que as árvores liberam umidade, alimenta as nuvens e ajuda a manter o ciclo de chuvas,<br> formando os chamados "rios voadores"  massas de vapor que se deslocam para<br> outras regiões do Brasil e América do Sul.</b>.</font></font></p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 600px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([-3.07, -60.02], 5);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var amazonas = L.polyline([
+            [-3.07, -60.02],
+            [-3.13, -59.96],
+            [-3.29, -59.88],
+            [-3.39, -59.61],
+            [-3.83, -58.62],
+            [-4.09, -57.93],
+            [-3.76, -57.31],
+            [-3.18, -56.54]
+        ], {color: 'blue'}).addTo(map);
+
+        var tapajos = L.polyline([
+            [-2.52, -54.70],
+            [-2.42, -54.41],
+            [-2.25, -54.03],
+            [-2.13, -53.63],
+            [-1.94, -53.29],
+            [-1.75, -53.15]
+        ], {color: 'green'}).addTo(map);
+
+        var xingu = L.polyline([
+            [-1.75, -51.55],
+            [-1.95, -51.20],
+            [-2.20, -51.00],
+            [-2.35, -50.85],
+            [-2.50, -50.65],
+            [-2.70, -50.45]
+        ], {color: 'red'}).addTo(map);
+
+        amazonas.bindPopup("Rio Amazonas");
+        tapajos.bindPopup("Rio Tapajós");
+        xingu.bindPopup("Rio Xingu");
+    </script>
+
+    <h1></h1>
+    <p></p>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
