@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <title>Document</title>
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/carousel.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">MTEC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+          </li>
+
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+</header>
+</head>
+<body>
+
+    
+    <style>
+        #map {
+            height: 600px;
+            margin-top: 20px;
+        }
+    </style>
+
+<body>
+
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <div class="container">
+                <div id="map"></div>
+            </div>
+            <div class="container">
+                <img src="" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hidrografia do Bioma Pampa</font></font></h1>
+            <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">O bioma Pampa é bem servido de recursos hídricos, com diversos rios, córregos e lagos espalhados pela região. <br> Algumas bacias hidrográficas importantes que atravessam o Pampa incluem:
+            </h3>
+            <ul>
+                <li>
+                    <b>
+                        Bacia do Rio Uruguai: </b> Principal bacia hidrográfica que drena grande parte do Pampa gaúcho.
+                </li>
+            
+                <li>
+                    <b>Bacia do Rio Jacuí: </b> Outra bacia significativa na região, com rios importantes para a agricultura e pecuária local
+                </li>
+            </ul>
+            <h3>Esses corpos d'água são essenciais para a irrigação agrícola e o abastecimento das populações locais.
+            </h3>
+            
+            </h3> </b>.</font></font></p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="container">
+        <div id="map"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([-14.2350, -51.9253], 4);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Adicionando rios importantes do Brasil
+        var amazonas = L.polyline([
+            [-3.07, -60.02],
+            [-3.13, -59.96],
+            [-3.29, -59.88],
+            [-3.39, -59.61]
+            // Continue adicionando as coordenadas do rio Amazonas
+        ], {color: 'blue'}).addTo(map);
+
+        var parana = L.polyline([
+            [-22.90, -43.17],
+            [-22.91, -43.18],
+            [-22.92, -43.19]
+            // Continue adicionando as coordenadas do rio Paraná
+        ], {color: 'green'}).addTo(map);
+
+        var saoFrancisco = L.polyline([
+            [-12.97, -38.50],
+            [-12.98, -38.51],
+            [-12.99, -38.52]
+            // Continue adicionando as coordenadas do rio São Francisco
+        ], {color: 'red'}).addTo(map);
+        
+        amazonas.bindPopup("Rio Amazonas");
+        parana.bindPopup("Rio Paraná");
+        saoFrancisco.bindPopup("Rio São Francisco");
+    </script>
+    
+<h1>Hidrografia do Bioma Pampa</h1>
+<h3>O bioma Pampa é bem servido de recursos hídricos, com diversos rios, córregos e lagos espalhados pela região. <br> Algumas bacias hidrográficas importantes que atravessam o Pampa incluem:
+</h3>
+<ul>
+    <li>
+        <b>
+            Bacia do Rio Uruguai: </b> Principal bacia hidrográfica que drena grande parte do Pampa gaúcho.
+    </li>
+
+    <li>
+        <b>Bacia do Rio Jacuí: </b> Outra bacia significativa na região, com rios importantes para a agricultura e pecuária local
+    </li>
+</ul>
+<h3>Esses corpos d'água são essenciais para a irrigação agrícola e o abastecimento das populações locais.
+</h3>
+
+<a href="pampa.htm">Volte para a pagina principal</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>   
+</html>

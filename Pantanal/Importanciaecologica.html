@@ -22,8 +22,9 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
           </li>
+          
         </ul>
-        
+       
       </div>
     </div>
   </nav>
@@ -34,26 +35,44 @@
     <div class="container col-xxl-8 px-4 py-5">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div class="col-10 col-sm-8 col-lg-6">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <canvas id="chart"></canvas>
-                    </div>
-                </div>  
+            <div class="row">
+                <div class="col-md-12">
+                    <canvas id="chart"></canvas>
+                </div>
             </div>
           </div>
           <div class="col-lg-6">
-            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Importância Ecológica da Amazônia</font></font></h1>
-            <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A Amazônia é essencial para a saúde do planeta. Algumas das suas funções ecológicas incluem:
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Importancia Ecologica do Pantanal</font></font></h1>
+            <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">O<h3>O Pantanal possui uma importância ecológica imensa, que pode ser destacada em vários aspectos:
+            </h3>
+            <p>
+                <b>Biodiversidade:</b>O Pantanal abriga uma das maiores diversidades de fauna e flora do mundo. É lar de inúmeras espécies de aves, mamíferos, répteis, peixes e plantas, muitas das quais são endêmicas ou ameaçadas de extinção.
             </p>
-                <p>A floresta amazônica armazena grandes quantidades de carbono, ajudando a mitigar os efeitos das mudanças climáticas.<br>
-                    A vasta vegetação da Amazônia participa ativamente do ciclo hidrológico global, influenciando a formação de chuvas em outras regiões.<br>
-                    A Amazônia é um dos biomas mais diversos do mundo, sendo vital para<br> a preservação de espécies de plantas, animais e microorganismos, muitos dos quais ainda<br> não foram completamente estudados.</b></font></font></p>
+            <p>
+                <b>Regulação do Clima:</b>As áreas alagadas do Pantanal atuam como um regulador climático, ajudando a manter a umidade do ar e influenciando o clima regional.
+            </p>
+            <p>
+                <b>Filtragem da Agua:</b>Os ecossistemas aquáticos do Pantanal desempenham um papel crucial na filtragem de água, melhorando a qualidade da água que flui para os rios e lagos.
+            </p>
+            <p>
+                <b>Ciclo de Nutrientes:</b>A inundação sazonal promove a ciclagem de nutrientes, que é vital para a fertilidade do solo e para a produtividade dos ecossistemas.
+            </p>
+            <p>
+                <b>Habitat para especies ameaçadas:</b>O Pantanal é um habitat crítico para várias espécies ameaçadas, como a onça-pintada e o tamanduá-bandeira, contribuindo para a conservação da biodiversidade.
+            </p>
+            <p>
+                <b>Atividades economicas sustentáveis:</b>A região é importante para atividades como a pesca, a agricultura sustentável e o ecoturismo, que podem ser realizadas de forma a preservar o meio ambiente.
+            </p>
+            <p>
+                Em resumo, a hidrografia do Pantanal não apenas molda a paisagem, mas também sustenta uma rica biodiversidade e desempenha um papel vital na saúde ecológica da região. A preservação desse bioma é essencial para garantir a continuidade de seus serviços ecossistêmicos e a sobrevivência das espécies que nele habitam.
+        
+            </p></b>.</font></font></p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
             </div>
           </div>
         </div>
       </div>
+
     
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -68,11 +87,7 @@
   <body>
       <div class="container mt-5">
           
-          <div class="row">
-              <div class="col-md-12">
-                  <canvas id="chart"></canvas>
-              </div>
-          </div>
+         
       </div>
   
       <script>
@@ -80,25 +95,23 @@
           var chart = new Chart(ctx, {
               type: 'pie',
               data: {
-                  labels: ['Biodiversidade', 'Regulação Climática', 'Ciclo da Água', 'Produção de Oxigênio', 'Sequestro de Carbono', 'Sustentação de Comunidades Locais'],
+                  labels: ['Biodiversidade', 'Regulação das Águas', 'Carbono Sequestrado', 'Habitat para Fauna', 'Turismo Ecológico'],
                   datasets: [{
                       label: 'Importância Ecológica (%)',
-                      data: [30, 25, 20, 15, 5, 5],
+                      data: [30, 25, 20, 15, 10],
                       backgroundColor: [
                           'rgba(75, 192, 192, 0.2)',
-                          'rgba(255, 99, 132, 0.2)',
                           'rgba(54, 162, 235, 0.2)',
+                          'rgba(255, 99, 132, 0.2)',
                           'rgba(255, 206, 86, 0.2)',
-                          'rgba(153, 102, 255, 0.2)',
-                          'rgba(255, 159, 64, 0.2)'
+                          'rgba(153, 102, 255, 0.2)'
                       ],
                       borderColor: [
                           'rgba(75, 192, 192, 1)',
-                          'rgba(255, 99, 132, 1)',
                           'rgba(54, 162, 235, 1)',
+                          'rgba(255, 99, 132, 1)',
                           'rgba(255, 206, 86, 1)',
-                          'rgba(153, 102, 255, 1)',
-                          'rgba(255, 159, 64, 1)'
+                          'rgba(153, 102, 255, 1)'
                       ],
                       borderWidth: 1
                   }]

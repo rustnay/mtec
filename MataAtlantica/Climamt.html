@@ -22,6 +22,12 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
         </ul>
         
       </div>
@@ -34,27 +40,28 @@
     <div class="container col-xxl-8 px-4 py-5">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div class="col-10 col-sm-8 col-lg-6">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <canvas id="chart"></canvas>
-                    </div>
-                </div>  
+            <div class="row">
+                <div class="col-md-12">
+                    <canvas id="chart"></canvas>
+                </div>
             </div>
           </div>
           <div class="col-lg-6">
-            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Importância Ecológica da Amazônia</font></font></h1>
-            <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A Amazônia é essencial para a saúde do planeta. Algumas das suas funções ecológicas incluem:
-            </p>
-                <p>A floresta amazônica armazena grandes quantidades de carbono, ajudando a mitigar os efeitos das mudanças climáticas.<br>
-                    A vasta vegetação da Amazônia participa ativamente do ciclo hidrológico global, influenciando a formação de chuvas em outras regiões.<br>
-                    A Amazônia é um dos biomas mais diversos do mundo, sendo vital para<br> a preservação de espécies de plantas, animais e microorganismos, muitos dos quais ainda<br> não foram completamente estudados.</b></font></font></p>
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Clima da Mata Atlântica</font></font></h1>
+            <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><h4>O clima predominante na Mata Atlântica é o tropical úmido, com grande variação local devido à extensão geográfica do bioma e às diferenças de altitude. As principais características climáticas incluem</h4>
+                <ul>
+                    <li><b>Altas precipitações:</b> Chuvas abundantes, com média de 1.500 a 2.500 mm anuais, que podem chegar a mais de 3.000 mm em algumas regiões, especialmente nas encostas montanhosas.
+                    </li>
+                    <br>
+                    <li><b>Temperaturas variadas:</b> A temperatura média anual varia entre 18°C e 26°C nas regiões litorâneas e pode ser mais baixa em áreas de altitude. </li>
+                    <br>
+                        <li><b>Umidade:</b> Altos índices de umidade devido à proximidade com o oceano e à grande densidade de vegetação</li>
+                </ul></b>.</font></font></p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
             </div>
           </div>
         </div>
       </div>
-    
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       <style>
@@ -68,43 +75,36 @@
   <body>
       <div class="container mt-5">
           
-          <div class="row">
-              <div class="col-md-12">
-                  <canvas id="chart"></canvas>
-              </div>
-          </div>
+         
       </div>
   
       <script>
           var ctx = document.getElementById('chart').getContext('2d');
           var chart = new Chart(ctx, {
-              type: 'pie',
+              type: 'line',
               data: {
-                  labels: ['Biodiversidade', 'Regulação Climática', 'Ciclo da Água', 'Produção de Oxigênio', 'Sequestro de Carbono', 'Sustentação de Comunidades Locais'],
+                  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
                   datasets: [{
-                      label: 'Importância Ecológica (%)',
-                      data: [30, 25, 20, 15, 5, 5],
-                      backgroundColor: [
-                          'rgba(75, 192, 192, 0.2)',
-                          'rgba(255, 99, 132, 0.2)',
-                          'rgba(54, 162, 235, 0.2)',
-                          'rgba(255, 206, 86, 0.2)',
-                          'rgba(153, 102, 255, 0.2)',
-                          'rgba(255, 159, 64, 0.2)'
-                      ],
-                      borderColor: [
-                          'rgba(75, 192, 192, 1)',
-                          'rgba(255, 99, 132, 1)',
-                          'rgba(54, 162, 235, 1)',
-                          'rgba(255, 206, 86, 1)',
-                          'rgba(153, 102, 255, 1)',
-                          'rgba(255, 159, 64, 1)'
-                      ],
-                      borderWidth: 1
+                      label: 'Temperatura Média (°C)',
+                      data: [26, 26, 25, 24, 23, 22, 22, 23, 24, 25, 26, 26],
+                      borderColor: 'rgba(75, 192, 192, 1)',
+                      backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                      fill: false
+                  }, {
+                      label: 'Precipitação Média (mm)',
+                      data: [150, 140, 130, 120, 100, 90, 80, 90, 100, 120, 140, 150],
+                      borderColor: 'rgba(255, 99, 132, 1)',
+                      backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                      fill: false
                   }]
               },
               options: {
-                  responsive: true
+                  responsive: true,
+                  scales: {
+                      y: {
+                          beginAtZero: true
+                      }
+                  }
               }
           });
       </script>

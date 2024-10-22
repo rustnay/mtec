@@ -22,9 +22,9 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
           </li>
-          
+         
         </ul>
-        
+       
       </div>
     </div>
   </nav>
@@ -35,29 +35,29 @@
     <div class="container col-xxl-8 px-4 py-5">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div class="col-10 col-sm-8 col-lg-6">
-            <div class="row">
-                <div class="col-md-12">
-                    <canvas id="chart"></canvas>
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <canvas id="chart"></canvas>
+                    </div>
                 </div>
             </div>
           </div>
           <div class="col-lg-6">
-            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Biodiversidade da Mata Atlântica</font></font></h1>
-            <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><h3>A Mata Atlântica é um dos biomas mais ricos em biodiversidade do mundo, com muitas espécies endêmicas.
-                Cultura e Tradições: <br> Comunidades tradicionais, como indígenas e quilombolas, têm uma forte conexão cultural com a Mata Atlântica, utilizando seus recursos de maneira sustentável.
-                Serviços Ecossistêmicos: <br> O bioma fornece água, alimentos e proteção contra desastres naturais, sendo essencial para a qualidade de vida das populações locais.
-                Turismo e Educação: A Mata Atlântica é um destino turístico que promove a conscientização sobre a conservação ambiental.</h3></b>.</font></font></p>
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Biodiversidades da Caatinga</font></font></h1>
+            <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A Caatinga, bioma exclusivo do Brasil, é uma das regiões mais ricas em biodiversidade do mundo. Possui uma variedade de plantas adaptadas ao clima semiárido, como cactos e arbustos espinhosos. Em termos de fauna, abriga espécies únicas como o tatu-bola e o macaco-prego-galego. A Caatinga é um exemplo impressionante de adaptação e sobrevivência em condições extremas.</b>.</font></font></p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
             </div>
           </div>
         </div>
       </div>
+
       <!DOCTYPE html>
       <html lang="pt-br">
       <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Biodiversidade do Bioma Mata Atlântica</title>
+          <title>Biodiversidade do Bioma Caatinga</title>
           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
           <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
           <style>
@@ -69,10 +69,7 @@
           </style>
       </head>
       <body>
-          <div class="container mt-5">
-              
-             
-          </div>
+          
       
           <script>
               var ctx = document.getElementById('chart').getContext('2d');
@@ -82,7 +79,7 @@
                       labels: ['Plantas', 'Mamíferos', 'Aves', 'Répteis', 'Anfíbios', 'Peixes', 'Invertebrados'],
                       datasets: [{
                           label: 'Número de Espécies',
-                          data: [20000, 300, 1020, 197, 370, 350, 96000],
+                          data: [932, 148, 510, 177, 79, 240, 2400],
                           backgroundColor: [
                               'rgba(75, 192, 192, 0.2)',
                               'rgba(255, 99, 132, 0.2)',

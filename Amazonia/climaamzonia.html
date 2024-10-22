@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Document</title>
     <!-- Custom styles for this template -->
     <link href="../assets/css/carousel.css" rel="stylesheet">
@@ -43,40 +44,28 @@
             </div>
           </div>
           <div class="col-lg-6">
-            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vegetação da Amazônia</font></font></h1>
-            <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A vegetação da Amazônia é uma das mais ricas e diversas do mundo. O bioma abriga a Floresta Amazônica,<br> uma floresta tropical densa e heterogênea. Suas principais características incluem:</p>
-                <br>
-                <br>
-                <p><b>Floresta Ombrófila Densa:</b><br> Vegetação fechada,<br> com árvores de grande porte (algumas chegando a 60 metros de altura), como a castanheira, seringueira, sumaúma, copaíba e mogno.</p>
-                <br>
-                <br>
-                <p><b>Floresta de Várzea:</b><br> Vegetação que se adapta às áreas sazonalmente alagadas, próximas aos rios</p>
-                <br>
-                <br>
-                <p><b>Floresta de Igapó:</b><br> Vegetação inundada por águas permanentes, com espécies como vitórias-régias.
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Clima da Amazônia</font></font></h1>
+            <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">O clima predominante na Amazônia é o equatorial úmido, caracterizado por:<br>
+                Altas temperaturas durante todo o ano (média de 25°C a 27°C).
                 </p>
-                <br>
-                <br>
-                <p><b>Campinarana:</b><br> Vegetação arbustiva que cresce em solos pobres em nutrientes e mal drenados.
-                </p>
-                <p>A densa cobertura vegetal cria um microclima úmido e fresco, que ajuda a manter o ciclo de chuvas da região.</b>.</font></font></p>
+                <p>Chuvas abundantes, com precipitação anual variando entre 2.000 mm e 3.500 mm.<br> Em algumas áreas, pode chover praticamente todos os dias.</p>
+                <p>Alta umidade relativa do ar, geralmente acima de 80%, criando condições ideais para a vida vegetal e animais.</b>.</font></font></p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
             </div>
           </div>
         </div>
       </div>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+   
     <style>
         #chart {
             width: 100%;
-            height: 50%;
+            height: 400px;
             margin-top: 20px;
         }
     </style>
-</head>
-<body>
+
     <div class="container mt-5">
         
         <div class="row">
@@ -89,23 +78,21 @@
     <script>
         var ctx = document.getElementById('chart').getContext('2d');
         var chart = new Chart(ctx, {
-            type: 'bar',
+            type: 'line',
             data: {
-                labels: ['Floresta de Terra Firme', 'Floresta de Várzea', 'Floresta de Igapó'],
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
                 datasets: [{
-                    label: 'Área em km²',
-                    data: [3000000, 1000000, 500000],
-                    backgroundColor: [
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 99, 132, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 99, 132, 1)'
-                    ],
-                    borderWidth: 1
+                    label: 'Temperatura Média (°C)',
+                    data: [26, 26, 26, 27, 27, 27, 27, 28, 28, 27, 27, 26],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    fill: false
+                }, {
+                    label: 'Precipitação Média (mm)',
+                    data: [300, 290, 280, 260, 240, 210, 190, 200, 220, 250, 280, 300],
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    fill: false
                 }]
             },
             options: {
@@ -118,6 +105,11 @@
             }
         });
     </script>
+
+    <h1></h1>
+    <p>
+    </p>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

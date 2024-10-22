@@ -22,6 +22,7 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
           </li>
+          
         </ul>
         
       </div>
@@ -41,37 +42,26 @@
                     </div>
                 </div>
             </div>
+            <div class="container">
+                <img src="" alt="">
+            </div>
           </div>
           <div class="col-lg-6">
-            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vegetação da Amazônia</font></font></h1>
-            <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A vegetação da Amazônia é uma das mais ricas e diversas do mundo. O bioma abriga a Floresta Amazônica,<br> uma floresta tropical densa e heterogênea. Suas principais características incluem:</p>
-                <br>
-                <br>
-                <p><b>Floresta Ombrófila Densa:</b><br> Vegetação fechada,<br> com árvores de grande porte (algumas chegando a 60 metros de altura), como a castanheira, seringueira, sumaúma, copaíba e mogno.</p>
-                <br>
-                <br>
-                <p><b>Floresta de Várzea:</b><br> Vegetação que se adapta às áreas sazonalmente alagadas, próximas aos rios</p>
-                <br>
-                <br>
-                <p><b>Floresta de Igapó:</b><br> Vegetação inundada por águas permanentes, com espécies como vitórias-régias.
-                </p>
-                <br>
-                <br>
-                <p><b>Campinarana:</b><br> Vegetação arbustiva que cresce em solos pobres em nutrientes e mal drenados.
-                </p>
-                <p>A densa cobertura vegetal cria um microclima úmido e fresco, que ajuda a manter o ciclo de chuvas da região.</b>.</font></font></p>
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Solo do Pampa</font></font></h1>
+            <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Os solos do Pampa são, em sua maioria, profundos e férteis, especialmente nas áreas de campos. <br> No entanto, sua qualidade pode variar, sendo que algumas áreas sofrem com erosão e compactação devido ao uso inadequado para pastagem e agricultura. <br> Em algumas regiões, há solos pedregosos e arenosos, enquanto outras têm solos argilosos e ricos em nutrientes, ideais para a agricultura.</h3>
+            </h3> </b>.</font></font></p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
             </div>
           </div>
         </div>
       </div>
-
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         #chart {
             width: 100%;
-            height: 50%;
+            height: 400px;
             margin-top: 20px;
         }
     </style>
@@ -89,32 +79,29 @@
     <script>
         var ctx = document.getElementById('chart').getContext('2d');
         var chart = new Chart(ctx, {
-            type: 'bar',
+            type: 'doughnut',
             data: {
-                labels: ['Floresta de Terra Firme', 'Floresta de Várzea', 'Floresta de Igapó'],
+                labels: ['Areia', 'Silte', 'Argila', 'Matéria Orgânica'],
                 datasets: [{
-                    label: 'Área em km²',
-                    data: [3000000, 1000000, 500000],
+                    label: 'Percentual de Composição',
+                    data: [40, 30, 20, 10],
                     backgroundColor: [
-                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 99, 132, 0.2)'
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(75, 192, 192, 0.2)'
                     ],
                     borderColor: [
-                        'rgba(75, 192, 192, 1)',
+                        'rgba(255, 206, 86, 1)',
                         'rgba(54, 162, 235, 1)',
-                        'rgba(255, 99, 132, 1)'
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(75, 192, 192, 1)'
                     ],
                     borderWidth: 1
                 }]
             },
             options: {
-                responsive: true,
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
+                responsive: true
             }
         });
     </script>

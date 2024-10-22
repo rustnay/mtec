@@ -22,6 +22,7 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
           </li>
+          
         </ul>
         
       </div>
@@ -34,44 +35,40 @@
     <div class="container col-xxl-8 px-4 py-5">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div class="col-10 col-sm-8 col-lg-6">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <canvas id="chart"></canvas>
-                    </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <canvas id="chart"></canvas>
                 </div>
             </div>
           </div>
           <div class="col-lg-6">
-            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vegetação da Amazônia</font></font></h1>
-            <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A vegetação da Amazônia é uma das mais ricas e diversas do mundo. O bioma abriga a Floresta Amazônica,<br> uma floresta tropical densa e heterogênea. Suas principais características incluem:</p>
-                <br>
-                <br>
-                <p><b>Floresta Ombrófila Densa:</b><br> Vegetação fechada,<br> com árvores de grande porte (algumas chegando a 60 metros de altura), como a castanheira, seringueira, sumaúma, copaíba e mogno.</p>
-                <br>
-                <br>
-                <p><b>Floresta de Várzea:</b><br> Vegetação que se adapta às áreas sazonalmente alagadas, próximas aos rios</p>
-                <br>
-                <br>
-                <p><b>Floresta de Igapó:</b><br> Vegetação inundada por águas permanentes, com espécies como vitórias-régias.
-                </p>
-                <br>
-                <br>
-                <p><b>Campinarana:</b><br> Vegetação arbustiva que cresce em solos pobres em nutrientes e mal drenados.
-                </p>
-                <p>A densa cobertura vegetal cria um microclima úmido e fresco, que ajuda a manter o ciclo de chuvas da região.</b>.</font></font></p>
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hidrografia do Pantanal</font></font></h1>
+            <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><h3>O Pantanal é um dos maiores ecossistemas de inundação do mundo, localizado principalmente no Brasil, mas também se estendendo por partes da Bolívia e do Paraguai. Sua hidrografia é caracterizada por uma complexa rede de rios, lagoas e áreas alagadas. Os principais rios que drenam a região incluem:</h3>
+                <ul>
+                    <li>
+                        <b>Rio Paraguai:</b> É o principal rio que atravessa o Pantanal, servindo como um dos principais eixos de drenagem.
+                    </li>
+                    <li>
+                        <b>Rio Cuiaba:</b>  Um dos afluentes do Rio Paraguai, que também desempenha um papel importante na hidrografia local.     
+                    </li>
+                    <li>
+                        <b>Rio São Lorenço:</b> Outro afluente significativo que contribui para a dinâmica hídrica da região.
+                    </li>
+                </ul>
+                <h3>A inundação sazonal é uma característica marcante do Pantanal, onde as chuvas durante a estação chuvosa (de novembro a março) fazem com que as águas dos rios transbordem, inundando vastas áreas. Esse fenômeno cria um ambiente rico em biodiversidade e é crucial para a manutenção dos ecossistemas locais.
+                </h3></b>.</font></font></p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
             </div>
           </div>
         </div>
       </div>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         #chart {
             width: 100%;
-            height: 50%;
+            height: 400px;
             margin-top: 20px;
         }
     </style>
@@ -79,42 +76,35 @@
 <body>
     <div class="container mt-5">
         
-        <div class="row">
-            <div class="col-md-12">
-                <canvas id="chart"></canvas>
-            </div>
-        </div>
+       
     </div>
 
     <script>
         var ctx = document.getElementById('chart').getContext('2d');
         var chart = new Chart(ctx, {
-            type: 'bar',
+            type: 'doughnut',
             data: {
-                labels: ['Floresta de Terra Firme', 'Floresta de Várzea', 'Floresta de Igapó'],
+                labels: ['Rios', 'Lagoas', 'Áreas Alagadas', 'Canais'],
                 datasets: [{
-                    label: 'Área em km²',
-                    data: [3000000, 1000000, 500000],
+                    label: 'Cobertura Hidrográfica (%)',
+                    data: [40, 30, 20, 10],
                     backgroundColor: [
                         'rgba(75, 192, 192, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 99, 132, 0.2)'
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(255, 206, 86, 0.2)'
                     ],
                     borderColor: [
                         'rgba(75, 192, 192, 1)',
                         'rgba(54, 162, 235, 1)',
-                        'rgba(255, 99, 132, 1)'
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(255, 206, 86, 1)'
                     ],
                     borderWidth: 1
                 }]
             },
             options: {
-                responsive: true,
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
+                responsive: true
             }
         });
     </script>

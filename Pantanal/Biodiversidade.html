@@ -22,8 +22,9 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
           </li>
+          
         </ul>
-        
+       
       </div>
     </div>
   </nav>
@@ -34,44 +35,49 @@
     <div class="container col-xxl-8 px-4 py-5">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div class="col-10 col-sm-8 col-lg-6">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <canvas id="chart"></canvas>
-                    </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <canvas id="chart"></canvas>
                 </div>
             </div>
           </div>
           <div class="col-lg-6">
-            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vegetação da Amazônia</font></font></h1>
-            <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A vegetação da Amazônia é uma das mais ricas e diversas do mundo. O bioma abriga a Floresta Amazônica,<br> uma floresta tropical densa e heterogênea. Suas principais características incluem:</p>
-                <br>
-                <br>
-                <p><b>Floresta Ombrófila Densa:</b><br> Vegetação fechada,<br> com árvores de grande porte (algumas chegando a 60 metros de altura), como a castanheira, seringueira, sumaúma, copaíba e mogno.</p>
-                <br>
-                <br>
-                <p><b>Floresta de Várzea:</b><br> Vegetação que se adapta às áreas sazonalmente alagadas, próximas aos rios</p>
-                <br>
-                <br>
-                <p><b>Floresta de Igapó:</b><br> Vegetação inundada por águas permanentes, com espécies como vitórias-régias.
-                </p>
-                <br>
-                <br>
-                <p><b>Campinarana:</b><br> Vegetação arbustiva que cresce em solos pobres em nutrientes e mal drenados.
-                </p>
-                <p>A densa cobertura vegetal cria um microclima úmido e fresco, que ajuda a manter o ciclo de chuvas da região.</b>.</font></font></p>
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Biodiversidade do Pantanal</font></font></h1>
+            <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><ul>
+                <li>
+                    O Pantanal abriga uma vasta gama de espécies de flora e fauna. Estima-se que existam mais de 4.700 espécies de plantas, 400 espécies de aves, 300 espécies de mamíferos, 260 espécies de peixes e 50 espécies de répteis.
+                </li>
+                <li>
+                    Algumas espécies emblemáticas incluem a onça-pintada, o jacaré, a capivara, o tuiuiú (uma ave símbolo do Pantanal) e diversas espécies de peixes como o pacu e o pintado.
+                </li>
+            </ul>
+            <h2>Ecossistema</h2>
+            <ul>
+                <li>
+                    O Pantanal é composto por diferentes ecossistemas, incluindo áreas de campos, florestas, lagoas e rios. A dinâmica das cheias e secas é fundamental para a manutenção da biodiversidade.
+                </li>
+            </ul>
+            <h2>Importancia</h2>
+            <ul>
+                <li>
+                   <b> Ecológica: </b> <br> O Pantanal desempenha um papel crucial na regulação do clima e na purificação da água. Ele também é um importante habitat para muitas espécies ameaçadas de extinção.
+                </li>
+            <li>
+                <b>Economica</b><br>A região é vital para a economia local, com atividades como a pecuária, turismo ecológico e pesca. O ecoturismo tem crescido, atraindo visitantes interessados na observação da vida selvagem
+            </li>
+            </ul></b>.</font></font></p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
             </div>
           </div>
         </div>
       </div>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         #chart {
             width: 100%;
-            height: 50%;
+            height: 400px;
             margin-top: 20px;
         }
     </style>
@@ -79,11 +85,7 @@
 <body>
     <div class="container mt-5">
         
-        <div class="row">
-            <div class="col-md-12">
-                <canvas id="chart"></canvas>
-            </div>
-        </div>
+        
     </div>
 
     <script>
@@ -91,19 +93,27 @@
         var chart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Floresta de Terra Firme', 'Floresta de Várzea', 'Floresta de Igapó'],
+                labels: ['Plantas', 'Mamíferos', 'Aves', 'Répteis', 'Anfíbios', 'Peixes', 'Invertebrados'],
                 datasets: [{
-                    label: 'Área em km²',
-                    data: [3000000, 1000000, 500000],
+                    label: 'Número de Espécies',
+                    data: [1700, 120, 650, 80, 50, 260, 1700],
                     backgroundColor: [
                         'rgba(75, 192, 192, 0.2)',
+                        'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 99, 132, 0.2)'
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(60, 179, 113, 0.2)'
                     ],
                     borderColor: [
                         'rgba(75, 192, 192, 1)',
+                        'rgba(255, 99, 132, 1)',
                         'rgba(54, 162, 235, 1)',
-                        'rgba(255, 99, 132, 1)'
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(60, 179, 113, 1)'
                     ],
                     borderWidth: 1
                 }]

@@ -39,22 +39,19 @@
                     <div class="col-md-12">
                         <canvas id="chart"></canvas>
                     </div>
-                </div>  
+                </div>
             </div>
           </div>
           <div class="col-lg-6">
-            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Importância Ecológica da Amazônia</font></font></h1>
-            <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A Amazônia é essencial para a saúde do planeta. Algumas das suas funções ecológicas incluem:
-            </p>
-                <p>A floresta amazônica armazena grandes quantidades de carbono, ajudando a mitigar os efeitos das mudanças climáticas.<br>
-                    A vasta vegetação da Amazônia participa ativamente do ciclo hidrológico global, influenciando a formação de chuvas em outras regiões.<br>
-                    A Amazônia é um dos biomas mais diversos do mundo, sendo vital para<br> a preservação de espécies de plantas, animais e microorganismos, muitos dos quais ainda<br> não foram completamente estudados.</b></font></font></p>
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Solo da Amazônia</font></font></h1>
+            <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">O solo da Amazônia é geralmente pobre em nutrientes, com exceção das áreas de várzea e igapó, que recebem sedimentos ricos durante as cheias dos rios. A floresta se sustenta através de um ciclo eficiente de nutrientes, onde a vegetação recicla matéria orgânica rapidamente. O solo em si é ácido e fino, com uma camada superficial de húmus que é essencial para a biodiversidade da floresta.</b>.</font></font></p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
             </div>
           </div>
         </div>
       </div>
-    
+
+
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       <style>
@@ -78,27 +75,23 @@
       <script>
           var ctx = document.getElementById('chart').getContext('2d');
           var chart = new Chart(ctx, {
-              type: 'pie',
+              type: 'doughnut',
               data: {
-                  labels: ['Biodiversidade', 'Regulação Climática', 'Ciclo da Água', 'Produção de Oxigênio', 'Sequestro de Carbono', 'Sustentação de Comunidades Locais'],
+                  labels: ['Areia', 'Silte', 'Argila', 'Matéria Orgânica'],
                   datasets: [{
-                      label: 'Importância Ecológica (%)',
-                      data: [30, 25, 20, 15, 5, 5],
+                      label: 'Percentual de Composição',
+                      data: [50, 20, 20, 10],
                       backgroundColor: [
-                          'rgba(75, 192, 192, 0.2)',
-                          'rgba(255, 99, 132, 0.2)',
-                          'rgba(54, 162, 235, 0.2)',
                           'rgba(255, 206, 86, 0.2)',
-                          'rgba(153, 102, 255, 0.2)',
-                          'rgba(255, 159, 64, 0.2)'
+                          'rgba(54, 162, 235, 0.2)',
+                          'rgba(255, 99, 132, 0.2)',
+                          'rgba(75, 192, 192, 0.2)'
                       ],
                       borderColor: [
-                          'rgba(75, 192, 192, 1)',
-                          'rgba(255, 99, 132, 1)',
-                          'rgba(54, 162, 235, 1)',
                           'rgba(255, 206, 86, 1)',
-                          'rgba(153, 102, 255, 1)',
-                          'rgba(255, 159, 64, 1)'
+                          'rgba(54, 162, 235, 1)',
+                          'rgba(255, 99, 132, 1)',
+                          'rgba(75, 192, 192, 1)'
                       ],
                       borderWidth: 1
                   }]
